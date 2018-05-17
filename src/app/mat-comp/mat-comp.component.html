@@ -1,0 +1,8 @@
+<form>
+  <mat-form-field>
+    <input style="border: aqua; margin-top: 20px" placeholder="Click Here" matInput [formControl]="form_control" [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of Options" [value]="option">{{option}}</mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
