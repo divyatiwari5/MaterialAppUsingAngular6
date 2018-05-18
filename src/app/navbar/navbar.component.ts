@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import { FormControl } from '@angular/forms';
+import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-navbar',
@@ -6,6 +8,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./navbar.component.css']
 })
 export class NavbarComponent implements OnInit {
+
+  events: string[] = [];
+  opened: boolean;
+  mode = new FormControl('over');
 
   constructor() { }
 

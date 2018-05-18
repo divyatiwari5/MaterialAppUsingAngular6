@@ -1,8 +1,8 @@
 .nav-container{
-  top: 20px;
-  left: 0px;
-  bottom: 0;
-  right: 0;
+  top: 70px;
+  left: 5px;
+  bottom: 70px;
+  right: 150px;
   background: lightgrey;
   position: absolute;
 }
@@ -10,7 +10,7 @@
 .drawer-container{
   width: 200px;
   height: 400px;
-  top: 20px;
+  top: 120px;
   left: -5px;
   float: right;
   border: 1px solid #555;

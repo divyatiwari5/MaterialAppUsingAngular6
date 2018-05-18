@@ -1,16 +1,51 @@
 <!--Layout with a left position and end position sidenav and explicit content-->
+<!--Mat-Side--Nav-Bar-->
+
+<mat-toolbar>Header</mat-toolbar>
 
 <mat-sidenav-container class="nav-container">
-  <mat-sidenav mode="side" opened> Sidenav Content</mat-sidenav>
+
+  <mat-sidenav #sidenav [mode]="mode.value" [(opened)]="opened" (opened)="events.push('open!')"
+               (closed)="events.push('close!')">
+
+    <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+    <p>
+      <mat-radio-group [formControl]="mode">
+        <label>Select Mode:</label>
+        <mat-radio-button value="over">Over</mat-radio-button>
+        <mat-radio-button value="push">Push</mat-radio-button>
+        <mat-radio-button value="side">Side</mat-radio-button>
+      </mat-radio-group>
+    </p>
+
+  </mat-sidenav>
   <mat-sidenav mode="side" [opened]="true" position="end">End content</mat-sidenav>
+
     <mat-sidenav-content>
+      <p><mat-checkbox [(ngModel)]="opened">sidenav.open</mat-checkbox></p>
+      <p><button mat-button (click)="sidenav.toggle()">sidenav.toggle()</button></p>
+      <p>
+        <mat-radio-group [formControl]="mode">
+          <label>Select Mode:</label>
+          <mat-radio-button value="over">Over</mat-radio-button>
+          <mat-radio-button value="push">Push</mat-radio-button>
+          <mat-radio-button value="side">Side</mat-radio-button>
+        </mat-radio-group>
+      </p>
     Main Content
     </mat-sidenav-content>
+
 </mat-sidenav-container>
 
-<!--
+<mat-toolbar>Footer</mat-toolbar>
+
+<!--Mat-drawer-container-->
+
 <mat-drawer-container class="drawer-container">
   <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
-  <mat-drawer-content>Main Drawer Content</mat-drawer-content>
+  <mat-drawer-content>
+
+    <p>EVENTS</p>
+    <div *ngFor="let e of events">{{e.toUpperCase()}}</div>
+  </mat-drawer-content>
 </mat-drawer-container>
--->
