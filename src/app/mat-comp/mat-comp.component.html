@@ -8,3 +8,21 @@
     </mat-autocomplete>
   </mat-form-field>
 </form>
+
+<label>Check Box:</label>
+<mat-checkbox style="margin-left: 50px">Check me!</mat-checkbox>
+
+<!--
+<label>Mat-options into group:</label>
+
+<form [formGroup="formgroup" style="margin-left: 40px">
+  <mat-form-field>
+    <input placeholder="Click Here" formControlName="groupoption" [matAutocomplete]="autoGroup">
+    <mat-autocomplete autoActiveFirstOption #autoGroup="matAutocomplete">
+      <mat-optgroup *ngFor="let group of GroupFilterFunction | async" [label]="group.letter">
+        <mat-option *ngFor="let name of group.names" [value]="name">{{name}}</mat-option>
+      </mat-optgroup>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+-->

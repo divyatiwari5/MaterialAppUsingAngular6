@@ -1,0 +1,16 @@
+<!--Layout with a left position and end position sidenav and explicit content-->
+
+<mat-sidenav-container class="nav-container">
+  <mat-sidenav mode="side" opened> Sidenav Content</mat-sidenav>
+  <mat-sidenav mode="side" [opened]="true" position="end">End content</mat-sidenav>
+    <mat-sidenav-content>
+    Main Content
+    </mat-sidenav-content>
+</mat-sidenav-container>
+
+<!--
+<mat-drawer-container class="drawer-container">
+  <mat-drawer mode="side" opened="true">Drawer content</mat-drawer>
+  <mat-drawer-content>Main Drawer Content</mat-drawer-content>
+</mat-drawer-container>
+-->
