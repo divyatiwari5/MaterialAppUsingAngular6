@@ -1,8 +1,10 @@
-<form>
+<label >Auto complete view: </label>
+
+<form style="margin-left: 40px">
   <mat-form-field>
-    <input style="border: aqua; margin-top: 20px" placeholder="Click Here" matInput [formControl]="form_control" [matAutocomplete]="auto">
-    <mat-autocomplete #auto="matAutocomplete">
-      <mat-option *ngFor="let option of Options" [value]="option">{{option}}</mat-option>
+    <input placeholder="Click Here" matInput [formControl]="form_control" [matAutocomplete]="auto">
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+      <mat-option *ngFor="let option of filteredOptions | async" [value]="option">{{option}}</mat-option>
     </mat-autocomplete>
   </mat-form-field>
 </form>
