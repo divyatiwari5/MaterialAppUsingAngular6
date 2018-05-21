@@ -1,6 +1,5 @@
-import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { MediaMatcher } from '@angular/cdk/layout';
 
 @Component({
   selector: 'app-navbar',
@@ -13,8 +12,10 @@ export class NavbarComponent implements OnInit {
   opened: boolean;
   mode = new FormControl('over');
 
-  constructor() { }
+  private mobileQueryListener: () => void;
 
+  constructor() {
+    }
   ngOnInit() {
   }
 
