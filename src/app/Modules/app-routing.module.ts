@@ -8,9 +8,8 @@ import {ResponsiveNavbarComponent} from '../responsive-navbar/responsive-navbar.
 const routes: Routes = [
   { path: '', component: AppComponent },
   { path: 'navbar', component: NavbarComponent},
-  { path: 'responsive', component: ResponsiveNavbarComponent},
-  {}
-]
+  { path: 'responsive', component: ResponsiveNavbarComponent}
+];
 
 @NgModule({
   imports: [

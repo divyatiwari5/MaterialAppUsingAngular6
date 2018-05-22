@@ -2,6 +2,7 @@
   <mat-toolbar color="primary" class="example-toolbar">
     <button mat-icon-button (click)="snav.toggle()" color="primary"> <mat-icon>menu</mat-icon></button>
     <h1 class="example-app-name"> Responsive App</h1>
+    <button (click)="notify()">show notification</button>
   </mat-toolbar>
 
   <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]=" mobileQuery.matches ? 56 : 0">
