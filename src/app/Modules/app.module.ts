@@ -22,7 +22,7 @@ import { environment } from '../../environments/environment';
   imports: [
     BrowserModule, FormsModule, BrowserAnimationsModule, MatCheckboxModule, MatSidenavModule, MatToolbarModule,
     ReactiveFormsModule, MatAutocompleteModule,  MatInputModule, MatFormFieldModule, MatRadioModule, MatIconModule, MatListModule,
-    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
+    ServiceWorkerModule.register('/MaterialAppUsingAngular6/dist/MaterialApp/ngsw-worker.js', { enabled: environment.production }),
  ],
   providers: [],
   bootstrap: [AppComponent]
